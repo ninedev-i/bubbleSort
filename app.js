@@ -47,12 +47,20 @@ class BubbleSortMethod {
       let green = 15;
       let blue = 55;
       let fromTop = 0;
+      let rgb = `${red}, ${green}, ${blue}`;
       let array = this.arraySorted;
       $.each(array, function(i) {
-         $('.wrapper').append("<div class='block block"+array[i]+"' style='background-color: rgb("+red+", "+green+", "+blue+"); top: "+fromTop+"%;'><div class='text'><span>"+array[i]+"</span></div></div>");
+         $('.wrapper').append(`<div class='block block${array[i]}'
+                                    style='background-color: rgb(${rgb});
+                                           top: ${fromTop}%;
+                                           border-top: 1px solid  rgb(${rgb});
+                                           border-bottom: 1px solid  rgb(${rgb});'>
+                                    <div class='text'><span>${array[i]}</span></div>
+                               </div>`);
          red = red + 5;
          green = green + 8;
          blue = blue + 8;
+         rgb = `${red}, ${green}, ${blue}`;
          fromTop = fromTop + 5;
       });
    }

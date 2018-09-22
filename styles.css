@@ -3,6 +3,7 @@ html, body {
    height: 100%;
    margin: 0px;
    padding: 0px;
+   overflow: hidden;
 }
 
 h1 {
@@ -17,7 +18,7 @@ h1 {
 
 .block {
    color: white;
-   height: 5%;
+   height: calc(5% - 1px);
    font-size: 1em;
    position: absolute;
    text-align: center;
